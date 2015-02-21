@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+div#form {
+	background: #DA81F5;
+	width: 500px;
+	height: 0px;
+	overflow: hidden;
+}
+</style>
+<script>
+function slideOpen(el) {
+	var elem = document.getElementById(el);
+	elem.style.transition = "height 0.5s linear 0s";
+	elem.style.height = "130px";
+}
+
+function slideClosed(el) {
+	var elem = document.getElementById(el);
+	elem.style.transition = "height 0.5s linear 0s";
+	elem.style.height = "0px";
+}
+
+function save() {
+	var l = document.getElementById('lname').value;
+	var f = document.getElementById('fname').value;
+	localStorage.setItem('last', l);
+	localStorage.setItem('first', f);
+	var name = localStorage.getItem('first') + " " + localStorage.getItem('last');
+		window.alert("Thank you " + name + "!");
+}
+
+</script>
+</head>
+<body>
+<button onclick="slideClosed('form');">Close Form</button>
+<button onclick="slideOpen('form');">Open Form</button>
+<div id="form">
+<br/>
+<br/>
+Please enter your first name:<input type="text" id="fname"/><br/>
+Please enter your last name:<input type="text" id="lname"/>
+<input type="button" value="save" onclick="save()"/>
+</div>
+
+</body>
+</html>
