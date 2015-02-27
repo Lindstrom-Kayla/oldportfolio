@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+canvas{ border: #666 1px solid; 
+background-color: #FFFF00;}
+</style>
+<script type="application/javascript" language="javascript">
+function draw (x,y){
+	var canvas = document.getElementById('canvas');
+	var ctx = canvas.getContext('2d');
+	ctx.save();
+	ctx.clearRect(0,0,550,400);
+	ctx.fillStyle = "#00A308";
+	ctx.beginPath();
+	ctx.arc(x,95,50,40,0,2*Math.PI);
+	ctx.fill();
+	x += 2;
+	var loopTimer = setTimeout ('draw('+x+', '+y+')', 20);
+
+}
+</script>
+</head>
+<body>
+<button onclick="draw(0,0)">Draw</button>
+<canvas id="canvas" width="550" height="400"></canvas>
+</body>
+</html>
