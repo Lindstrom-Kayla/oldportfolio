@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kayla's samples</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/css/portfolio.css">
+        
+        <script>
+
+            function save() {
+                var l = document.getElementById('lname').value;
+                var f = document.getElementById('fname').value;
+                localStorage.setItem('last', l);
+                localStorage.setItem('first', f);
+                var name = localStorage.getItem('first') + " " + localStorage.getItem('last');
+                window.alert("Thank you " + name + "!");
+            }
+
+        </script>
+    </head>
+    <body>
+        <h1>Kayla's Sandbox Code</h1>
+        <p>I have mixed just about everything into one working piece of code.  There is still more to come!</p>
+        <div id='example'>
+        <img src="http://upload.wikimedia.org/wikipedia/commons/2/24/Onedolar2009series.jpg" alt="dollar bill">
+        <br/>
+        <p>Please enter your first name:</p><input type="text" id="fname"/><br/>
+        <p>Please enter your last name:</p><input type="text" id="lname"/>
+        <input type="button" value="save" onclick="save()"/>
+        </div>
+    </body>
+</html>
