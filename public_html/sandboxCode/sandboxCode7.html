@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+@-webkit-keyframs backgroundGlow {
+    0% {
+        background-color: #FFBF00;
+    }
+    50% {
+        background-color: #3ADF00;
+    }
+    100% {
+        background-color: #6E6E6E;
+    }
+}
+@-moz-kayframes backgroundGlow {
+    0% {
+        background-color: #FFBF00;
+    }
+    50% {
+        background-color: #3ADF00;
+    }
+    100% {
+        background-color: #6E6E6E;
+    }
+}
+@-o-keyframes backgroundGlow {
+    0% {
+        background-color: #FFBF00;
+    }
+    50% {
+        background-color: #3ADF00;
+    }
+    100% {
+        background-color: #6E6E6E;
+    }
+}
+@keyframes backgroundGlow {
+    0% {
+        background-color: #FFBF00;
+    }
+    50% {
+        background-color: #3ADF00;
+    }
+    100% {
+        background-color: #6E6E6E;
+    }
+}
+.example {
+    padding-bottom: 10%;
+    background-color: #FFBF00;
+    animation: backgroundGlow 2s linear infinite; 
+}
+h1{
+    text-align: center;
+    font-size: 3em;
+    font-family: Georgia, Verdana, Arial, Times, Times New Roman;
+    color: #FFBF00;
+}
+h2{
+    text-align: center;
+    font-size: 1em;
+    font-family: Georgia, Verdana, Arial, Times, Times New Roman;
+    color: #FFBF00;
+}
+html {
+    background-color: #6E6E6E;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+img {
+    alignment-adjust: central;
+    height: 52px;
+    width: 120px;
+    margin-left: 42%;
+    margin-bottom: 10%;
+    margin-top: 15%;
+}
+img:hover {
+    -webkit-transform: scale(4);
+    -ms-transform: scale(4);
+    transform: scale(4);
+}
+#names {
+    text-align: center;
+}
+p{
+    font-family: Georgia, Verdana, Arial, Times, Times New Roman;
+    color: #FFBF00; 
+}
+
+
+</style>
+<script>
+
+            function save() {
+                var l = document.getElementById('lname').value;
+                var f = document.getElementById('fname').value;
+                localStorage.setItem('last', l);
+                localStorage.setItem('first', f);
+                var name = localStorage.getItem('first') + " " + localStorage.getItem('last');
+                window.alert("Thank you " + name + "!");
+            }
+
+        </script>
+    </head>
+    <body>
+        <h1>Kayla's Sandbox Code</h1>
+        <h2>I have mixed just about everything into one working piece of code.  There is still more to come!</h2>
+        <div class='example'>
+            <img src="http://upload.wikimedia.org/wikipedia/commons/2/24/Onedolar2009series.jpg" alt="dollar bill">
+            <br/>
+            <div id="names">
+                <p>Please enter your first name:</p><input type="text" id="fname"/>
+                <p>Please enter your last name:</p><input type="text" id="lname"/><br/>
+                <br/>
+                <input class="button" type="button" value="save" onclick="save()"/>
+            </div>
+        </div>
+
+
+
+    </body>
+</html>
